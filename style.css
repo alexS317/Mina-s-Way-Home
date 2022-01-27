@@ -1,0 +1,103 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: lightblue;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.screen {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.screen-image {
+    width: 1200px;
+}
+
+.button {
+    position: absolute;
+    width: 33%;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+/* Start screen */
+#start-screen {
+    display: block;
+}
+
+#start-button {
+    top: 48%;
+    left: 4%;
+}
+
+#how-to-play-button {
+    top: 75%;
+    left: 4%;
+}
+
+/* How to play screen */
+#how-to-play-screen {
+    display: none;
+}
+
+#back-button {
+    width: 20%;
+    top: 72%;
+    left: 40%;
+}
+
+/* Win screen */
+#win-screen {
+    display: none;
+}
+
+#points {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    top: 54%;
+    left: 50%;
+}
+
+#fish-symbol {
+    position: absolute;
+    width: 65px;
+    top: 54%;
+    left: 44%;
+}
+
+/* Game over screen */
+#game-over-screen {
+    display: none;
+}
+
+.homescreen-button {
+    top: 64%;
+    left: 34%
+}
+
+
+.wrapper {
+    height: 100%;
+    text-align: center;
+}
+
+#canvas {
+    display: none;
+    background-image: url('./Assets/background.png');
+}

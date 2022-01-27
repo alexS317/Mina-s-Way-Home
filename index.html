@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina's Way Home</title>
+
+    <link rel="icon" href="./Assets/tab_icon.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="screen" id="start-screen">
+        <img class="screen-image" id="start-image" src="./Assets/Screens/home_screen.png" alt="Mina's Way Home start screen">
+        <img class="button" id="start-button" src="./Assets/Screens/start_button.png" alt="Start button">
+        <img class="button" id="how-to-play-button" src="./Assets/Screens/how_to_play_button.png" alt="How to play button">
+    </div>
+    <div class="screen" id="how-to-play-screen">
+        <img class="screen-image" id="how-to-play-image" src="./Assets/Screens/how_to_play_screen.png" alt="How to play screen">
+        <img class="button" id="back-button" src="./Assets/Screens/back_button.png" alt="Back button">
+    </div>
+
+    <div class="wrapper">
+        <canvas id="canvas"></canvas>
+        <span class="credits">game by Alexandra Fontner, music by Eric Matyas <a href="https://soundimage.org/fantasywonder/">www.soundimage.org</a>, sound effects from <a href="https://orangefreesounds.com/plop/">orangefreesounds.com</a></span>
+    </div>
+
+    <div class="screen" id="win-screen">
+        <img class="screen-image" id="win-image" src="./Assets/Screens/win_screen.png" alt="Win screen">
+        <img class="button homescreen-button" src="./Assets/Screens/back_to_menu.png" alt="Back to menu button">
+        <div id="points"></div>
+        <img id="fish-symbol" src="./Assets/fish.png">
+    </div>
+    <div class="screen" id="game-over-screen">
+        <img class="screen-image" id="game-over-image" src="./Assets/Screens/game_over_screen.png" alt="Game over screen">
+        <img class="button homescreen-button" id="back-to-homescreen" src="./Assets/Screens/back_to_menu.png" alt="Back to menu button">
+    </div>
+    
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
