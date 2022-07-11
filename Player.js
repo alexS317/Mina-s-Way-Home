@@ -9,7 +9,7 @@ class Player extends GameObject {
         this.currentKeys = {};
         this.xVelocity = 0.5;
         this.yVelocity = 0.2;
-        this.gravity = 0.1;
+        this.gravity = 0.2;
         this.grounded = false;
     }
 
@@ -82,20 +82,13 @@ class Player extends GameObject {
         this.x += timePassedSinceLastRender * this.dx * this.xVelocity;
 
         // Jump
-        const jump = () => {
-            if(this.currentKeys['Space']) {
-                if(this.grounded) {
-                    this.dy = -10;
-                    this.grounded = false;
-                } else {
-                    this.dy += this.gravity;
-                }
-            } else {
-                this.dy += this.gravity;
-            }
-            this.y += timePassedSinceLastRender * this.dy * this.yVelocity;
+        if((this.currentKeys['Space'] || this.currentKeys['ArrowUp']) && this.grounded === true) {
+            this.dy = -6;
+            this.grounded = false;
+        } else {
+            this.dy += this.gravity;
         }
-        jump();
+        this.y += timePassedSinceLastRender * this.dy * this.yVelocity;
 
 
         // Decide which sprite to use
@@ -137,6 +130,14 @@ class Player extends GameObject {
             this.width,
             this.height);
 
+        this.context.strokeStyle = 'blue';
+        this.context.strokeRect(
+            -this.width / 2 + 10,
+            -this.height / 2 + this.height - 10,
+            this.width - 15,
+            this.height - this.height + 10
+        );
+
         this.context.resetTransform();
     }
 
@@ -165,9 +166,9 @@ class Player extends GameObject {
     getBoundingBoxPlayer() {
         return {
             x: this.x - this.width / 2 + 10,
-            y: this.y - this.height / 2 + this.height - 5,
+            y: this.y - this.height / 2 + this.height/2,
             w: this.width - 15,
-            h: this.height -this.height + 5,
+            h: this.height/3 + 20,
         }
     }
 }

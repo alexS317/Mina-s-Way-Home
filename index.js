@@ -153,6 +153,7 @@ const update = (timePassedSinceLastRender) => {
         }
     });
 
+
     
 }
 
@@ -177,6 +178,7 @@ const render = () => {
 
 // Loop to repeat update and render
 const loop = () => {
+    // Calculate how much time passes between the iterations, value will be used as a constant to keep the game at the same speed on screens with different refresh rates
     let timePassedSinceLastRender = performance.now() - lastTickTimestamp;
 
     update(timePassedSinceLastRender);

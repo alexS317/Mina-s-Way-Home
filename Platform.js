@@ -21,6 +21,14 @@ class Platform extends GameObject {
             this.width,
             this.height);
 
+        this.context.strokeStyle = 'blue';
+        this.context.strokeRect(
+            -this.width / 2,
+            -this.height / 2 - 1,
+            this.width,
+            this.height - 15
+        );
+
         this.context.resetTransform();
     }
 
@@ -30,7 +38,7 @@ class Platform extends GameObject {
             x: this.x - this.width / 2,
             y: this.y - this.height / 2 - 1,
             w: this.width,
-            h: this.height - 20,
+            h: this.height - 15,
         }
     }
 }
