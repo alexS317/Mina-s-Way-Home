@@ -21,13 +21,13 @@ class Platform extends GameObject {
             this.width,
             this.height);
 
-        this.context.strokeStyle = 'blue';
-        this.context.strokeRect(
-            -this.width / 2,
-            -this.height / 2 - 1,
-            this.width,
-            this.height - 15
-        );
+        // this.context.strokeStyle = 'blue';
+        // this.context.strokeRect(
+        //     -this.width / 2,
+        //     -this.height / 2 - 1,
+        //     this.width,
+        //     this.height - 15
+        // );
 
         this.context.resetTransform();
     }

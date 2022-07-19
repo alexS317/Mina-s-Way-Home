@@ -130,13 +130,13 @@ class Player extends GameObject {
             this.width,
             this.height);
 
-        this.context.strokeStyle = 'blue';
-        this.context.strokeRect(
-            -this.width / 2 + 10,
-            -this.height / 2 + this.height - 10,
-            this.width - 15,
-            this.height - this.height + 10
-        );
+        // this.context.strokeStyle = 'blue';
+        // this.context.strokeRect(
+        //     -this.width / 2 + 10,
+        //     -this.height / 2 + this.height - 10,
+        //     this.width - 15,
+        //     this.height - this.height + 10
+        // );
 
         this.context.resetTransform();
     }
